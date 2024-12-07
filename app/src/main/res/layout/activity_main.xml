@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/undoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_undo"
+        android:contentDescription="@string/undo_button"
+        android:layout_gravity="center"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <!-- Settings Button -->
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_settings"
+        android:contentDescription="@string/settings"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <!-- Current Image View -->
+    <ImageView
+        android:id="@+id/currentImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/settingsButton"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/current_image_description" />
+
+    <!-- Left Stack -->
+    <LinearLayout
+        android:id="@+id/leftStack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        android:background="#CCCCCC" />
+
+    <!-- Right Stack -->
+    <LinearLayout
+        android:id="@+id/rightStack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:background="#CCCCCC" />
+
+</RelativeLayout>
